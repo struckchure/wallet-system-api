@@ -2,12 +2,7 @@ FROM oven/bun:1.0.23
 
 WORKDIR /code/
 
-COPY prisma prisma
-COPY src src
-COPY package.json package.json
-COPY bun.lockb bun.lockb
-COPY tsconfig.json tsconfig.json
-# COPY .env .env
+COPY . .
 
 RUN bun install
 RUN bun run migrate
