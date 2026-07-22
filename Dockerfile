@@ -7,7 +7,7 @@ COPY src src
 COPY package.json package.json
 COPY bun.lockb bun.lockb
 COPY tsconfig.json tsconfig.json
-COPY .env .env
+# COPY .env .env
 
 RUN bun install
 RUN bun run migrate
