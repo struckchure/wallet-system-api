@@ -4,7 +4,7 @@ WORKDIR /code/
 
 COPY . .
 
-RUN bun install
+RUN bun install --frozen-lockfile
 RUN bun run migrate
 RUN bun run build
 
